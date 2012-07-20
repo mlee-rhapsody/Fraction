@@ -9,40 +9,19 @@
 #import "Fraction.h"
 
 @implementation Fraction
-{
-    int numerator;
-    int denominator;
-}
 
+@synthesize numerator = _numerator;
+@synthesize denominator = _denominator;
 -(void)print
 {
-    NSLog(@"%i/%i", numerator, denominator);
+    NSLog(@"%i/%i", self.numerator, self.denominator);
 }
 
--(void)setNumerator:(int)n
-{
-    numerator = n;
-}
-
--(void)setDenominator:(int)d
-{
-    denominator = d;
-}
-
--(int)numerator
-{
-    return numerator;
-}
-
--(int)denominator
-{
-    return denominator;
-}
 
 -(double)convertToNum
 {
-    if(denominator !=0){
-        return (double) numerator / denominator;
+    if(self.denominator !=0){
+        return (double) self.numerator / self.denominator;
     }else{
         return NAN;
     }
