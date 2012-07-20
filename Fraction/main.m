@@ -14,20 +14,21 @@ int main(int argc, const char * argv[])
 
     @autoreleasepool {
         
-        // insert code here...
-        NSLog(@"Hello, World!");
-        Fraction *f  = [[Fraction alloc] init];
+        Fraction *aFraction = [[Fraction alloc] init];
+        Fraction *bFraction = [[Fraction alloc] init];
         
-        /*  old way
-        [f setNumerator:3];
-        [f setDenominator:4];
-        */
+        // Set two fractions to 1/4 and 1/2 and add them together
+        [aFraction setTo: 1 over: 4];
+        [bFraction setTo: 1 over: 2];
         
-        // new method
-        [f setTo:3 over:4];
-                                                                                                                                                
-        [f print];
-             
+        // Print the results
+        [aFraction print];
+        NSLog(@"+");
+        [bFraction print];
+        NSLog(@ " = ");
+        
+        [aFraction add: bFraction];
+        [aFraction print];
     }
     return 0;
 }

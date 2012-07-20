@@ -32,4 +32,18 @@
     self.denominator = d;
 }
 
+
+-(void) add: (Fraction *)f{
+    // To add two fractions:
+    // a/b + c/d = ((a*d) + (b*c)) / (b *d)
+    
+    int a = self.numerator;
+    int b = self.denominator;
+    int c = f.numerator;
+    int d = f.denominator;
+    
+    self.numerator = a * d + b * c;
+    self.denominator = b * d;
+}
+
 @end
