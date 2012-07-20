@@ -18,8 +18,13 @@ int main(int argc, const char * argv[])
         NSLog(@"Hello, World!");
         Fraction *f  = [[Fraction alloc] init];
         
+        /*  old way
         [f setNumerator:3];
         [f setDenominator:4];
+        */
+        
+        // new method
+        [f setTo:3 over:4];
                                                                                                                                                 
         [f print];
              
