@@ -29,6 +29,9 @@ int main(int argc, const char * argv[])
         
         [aFraction add: bFraction];
         [aFraction print];
+        
+        [aFraction reduce];
+        [aFraction print];
     }
     return 0;
 }

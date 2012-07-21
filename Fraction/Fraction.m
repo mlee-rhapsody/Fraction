@@ -46,4 +46,19 @@
     self.denominator = b * d;
 }
 
+-(void) reduce{
+    int u = self.numerator;
+    int v = self.denominator;
+    int temp;
+    
+    while(v != 0){
+        temp = u % v;
+        u = v;
+        v = temp;
+    }
+    
+    self.numerator /= u;
+    self.denominator /=u;
+}
+
 @end
