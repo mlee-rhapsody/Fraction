@@ -44,6 +44,8 @@
     
     self.numerator = a * d + b * c;
     self.denominator = b * d;
+    
+    [self reduce];
 }
 
 -(void) reduce{
